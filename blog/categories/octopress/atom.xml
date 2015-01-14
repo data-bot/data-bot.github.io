@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Databot]]></title>
+  <link href="http://data-bot.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://data-bot.github.io/"/>
+  <updated>2015-01-15T00:49:15+05:30</updated>
+  <id>http://data-bot.github.io/</id>
+  <author>
+    <name><![CDATA[Bharat Khatri]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started With Octopress]]></title>
+    <link href="http://data-bot.github.io/blog/2015/01/15/getting-started-with-octopress/"/>
+    <updated>2015-01-15T00:39:42+05:30</updated>
+    <id>http://data-bot.github.io/blog/2015/01/15/getting-started-with-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress is a blogging framework built over <a href="http://jekyllrb.com">Jekyll</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h4>Why Octopress?</h4>
+
+<p>I did not choose Octopress over the <a href="https://www.staticgen.com">others</a> for specific reasons, and I <em>might</em> switch to something else in future.</p>
+
+<p>Octopress uses <a href="http://en.wikipedia.org/wiki/Rake_%28software%29">Rake</a><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> to expose all of its functionality. The Rake utility uses Rakefiles as input. Most of the stuff in Octopress is defined as Rake tasks, and it&rsquo;s good to understand some of these tasks in detail before you start working with Octopress.</p>
+
+<h4>Rake tasks in Octopress<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup></h4>
+
+<ul>
+<li><code>install</code></li>
+</ul>
+
+
+<p>This is the first Rake task to run after installing Octopress. It creates three top level directories: <code>source</code> (contatining the site source), <code>sass</code> (containing Sass files to generate site stylesheets) and <code>public</code> (containing the generated site).</p>
+
+<ul>
+<li><code>setup_github_pages</code></li>
+</ul>
+
+
+<p>This task is used to setup Octopress with <a href="https://pages.github.com">GitHub Pages</a>. It creates the <code>_deploy</code> directory which is used for deploying the generated site to the GitHub Pages repository.</p>
+
+<ul>
+<li><code>generate</code></li>
+</ul>
+
+
+<p>This task calls <a href="http://compass-style.org">Compass</a> to compile the Sass files and Jekyll to build the site. The generated site is stored in the <code>public</code> directory and contains everything your site needs in order to be served off a static file server.</p>
+
+<ul>
+<li><code>preview</code></li>
+</ul>
+
+
+<p>This task helps you preview the site on your local machine. It also monitors the <code>source</code> and <code>sass</code> directories for changes and regenerates the site if needed.</p>
+
+<ul>
+<li><code>deploy</code></li>
+</ul>
+
+
+<p>This task is used to deploy the site. The generated site is copied from the <code>public</code> directory to the <code>_deploy</code> directory and pushed to the GitHub Pages repository.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Jekyll is an open source blog-aware static site generator written in Ruby.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Rake is a Make-like program implemented in Ruby, and Rakefiles (equivalent of Makefiles in Make) use Ruby syntax.<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>All Rake tasks in the <a href="https://github.com/imathis/octopress/blob/master/Rakefile">Rakefile</a> have not been discussed here.<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>
